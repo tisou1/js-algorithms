@@ -230,6 +230,7 @@ export default class Heap {
     /**
      * 
      * @param {number} customStartIndex 
+     * 
      */
     heapifyUp(customStartIndex){
          // 取最后一个元素（数组中的最后一个或树中的左下角
@@ -238,6 +239,7 @@ export default class Heap {
 
         let currendIndex = customStartIndex || this.heapContainer.length - 1
 
+        
         while(this.hasParent(currendIndex) 
             && !this.pairIsInCorrectorder(this.parent(currendIndex), this.heapContainer[currendIndex])){
 
@@ -249,6 +251,7 @@ export default class Heap {
     /**
      * 
      * @param {number} customStartIndex 
+     * 
      */
     heapifyDown(customStartIndex = 0){
          // 比较父元素和它的子元素，并将父元素与适当的子元素交换。
